@@ -1,0 +1,795 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Women's Collection - SS Fabrics</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Playfair+Display:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols Outlined -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#ffdf99",
+              "on-primary-fixed-variant": "#5a4300",
+              "on-primary-container": "#513c00",
+              "on-error": "#ffffff",
+              "surface-tint": "#755b14",
+              "on-primary-fixed": "#251a00",
+              "secondary-container": "#e5e2e1",
+              "tertiary-container": "#aeaaa4",
+              tertiary: "#615e59",
+              "surface-container-highest": "#e9e1d8",
+              "surface-container-high": "#efe7de",
+              "on-surface": "#1e1b16",
+              "surface-container-lowest": "#ffffff",
+              error: "#ba1a1a",
+              "surface-bright": "#fff8f2",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#33302a",
+              "inverse-primary": "#e5c272",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#e5c272",
+              secondary: "#5f5e5e",
+              "tertiary-fixed": "#e7e2db",
+              "on-tertiary-fixed": "#1d1b17",
+              "on-secondary": "#ffffff",
+              "surface-variant": "#e9e1d8",
+              "secondary-fixed-dim": "#c8c6c5",
+              surface: "#fff8f2",
+              "on-tertiary-container": "#413f3a",
+              background: "#fff8f2",
+              outline: "#7f7667",
+              "outline-variant": "#d0c5b3",
+              "on-background": "#1e1b16",
+              "on-secondary-container": "#656464",
+              "on-tertiary-fixed-variant": "#494742",
+              "on-secondary-fixed-variant": "#474646",
+              "on-surface-variant": "#4d4638",
+              "tertiary-fixed-dim": "#cac6bf",
+              "inverse-on-surface": "#f7f0e6",
+              "surface-dim": "#e0d9d0",
+              "error-container": "#ffdad6",
+              primary: "#755b14",
+              "primary-container": "#c8a75a",
+              "surface-container-low": "#faf2e9",
+              "secondary-fixed": "#e5e2e1",
+              "on-secondary-fixed": "#1c1b1b",
+              "on-error-container": "#93000a",
+              "surface-container": "#f5ede3",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "section-gap": "120px",
+              unit: "8px",
+              "margin-mobile": "20px",
+              "margin-desktop": "80px",
+              gutter: "24px",
+              "container-max": "1440px",
+            },
+            fontFamily: {
+              "body-md": ["Manrope"],
+              "body-lg": ["Manrope"],
+              "headline-sm": ["Playfair Display"],
+              "display-lg-mobile": ["Playfair Display"],
+              "display-lg": ["Playfair Display"],
+              "label-caps": ["Manrope"],
+              "headline-md": ["Playfair Display"],
+            },
+            fontSize: {
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "headline-sm": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "500" },
+              ],
+              "display-lg-mobile": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "72px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "400" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: theme("colors.background");
+        color: theme("colors.on-background");
+      }
+      .product-card-hover {
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+      .product-card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 10px 25px -5px rgba(0, 0, 0, 0.05),
+          0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        border-color: theme("colors.primary");
+      }
+      .product-image-zoom {
+        transition: transform 0.6s ease;
+      }
+      .product-card-hover:hover .product-image-zoom {
+        transform: scale(1.05);
+      }
+      .quick-view-btn {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .product-card-hover:hover .quick-view-btn {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background antialiased min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden"
+  >
+    <!-- TopNavBar -->
+    <div id="ss-navbar"></div>
+    <!-- SideNavBar (Hidden by default, semantic placeholder) -->
+    <aside
+      class="fixed right-0 top-0 h-full w-[450px] z-[100] bg-surface-container-lowest dark:bg-inverse-surface border-l border-outline-variant/50 shadow-2xl translate-x-full transition-transform duration-500 ease-in-out hidden flex-col p-gutter"
+      id="sideNav"
+    >
+      <!-- Content injected dynamically or hidden via state -->
+    </aside>
+    <main class="flex-grow">
+      <!-- Hero Banner -->
+      <section
+        class="relative h-[550px] w-full flex items-center justify-center overflow-hidden bg-surface-container"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover object-center opacity-90"
+            data-alt="High-end editorial fashion photography of a Pakistani woman wearing a luxurious, intricately embroidered formal Shalwar Kameez in deep emerald green and gold. The model is striking a confident pose in a minimalist, light-filled studio setting. The lighting is soft and natural, emphasizing the rich texture of the fabric and the sophisticated 'Quiet Luxury' aesthetic of the SS Fabrics brand."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC85DCvqyHZkdE5ZC7Vc9Mkvz0DbbxFPey_o5fnmaIJ0XWgQqxWSiGpBKQPwVrJAK-0skdY8PtyfuyvyxOUNM0Sc7M9TmrCQ8kOfObTV0AP2EuxnKShL4zqd_tut7dJQGGvoyAb7xGdpMnA2YL4cKPRVUjlPdn75xvRDdZt9e6e2fYFSCXxJBktFsVWDI4Ofl0Bp0bkwzqNNFLQfywi3RbftPMt4-QXXsJbT-V2vB7fY2O6aUiLI6npoVWVdR1AZpVkaUNjJbRFS3Y"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+          ></div>
+        </div>
+        <div
+          class="relative z-10 text-center text-on-primary px-margin-mobile md:px-margin-desktop mt-20"
+        >
+          <nav
+            class="mb-4 font-label-caps text-label-caps text-on-primary/80 uppercase tracking-widest"
+          >
+            <a class="hover:text-primary-fixed transition-colors" href="#"
+              >Home</a
+            >
+            <span class="mx-2">/</span>
+            <span class="text-primary-fixed">Women</span>
+          </nav>
+          <h1
+            class="font-display-lg text-display-lg md:font-display-lg text-display-lg text-on-primary"
+          >
+            Women's Collection
+          </h1>
+          <p
+            class="mt-4 font-body-lg text-body-lg text-on-primary/90 max-w-2xl mx-auto"
+          >
+            Discover our exclusive range of meticulously crafted luxury eastern
+            wear, embodying heritage and contemporary elegance.
+          </p>
+        </div>
+      </section>
+      <div
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap"
+      >
+        <!-- Filters & Sorting -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center border-y border-outline-variant/30 py-6 mb-12 gap-6"
+        >
+          <div class="flex flex-wrap items-center gap-6">
+            <span
+              class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest"
+              >Filter By:</span
+            >
+            <!-- Brand Dropdown -->
+            <div class="relative group">
+              <button
+                class="flex items-center gap-2 font-body-md text-body-md text-on-surface hover:text-primary transition-colors"
+              >
+                Brand
+                <span
+                  class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180"
+                  >expand_more</span
+                >
+              </button>
+              <div
+                class="absolute left-0 top-full mt-2 w-48 bg-surface-container-lowest border border-outline-variant/20 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20"
+              >
+                <ul class="py-2">
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Zellbury</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Tawakhal</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Aaliya</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Limelight</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Sapphire</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Maria B.</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Gul Ahmed</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Collection Dropdown -->
+            <div class="relative group">
+              <button
+                class="flex items-center gap-2 font-body-md text-body-md text-on-surface hover:text-primary transition-colors"
+              >
+                Collection
+                <span
+                  class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180"
+                  >expand_more</span
+                >
+              </button>
+              <div
+                class="absolute left-0 top-full mt-2 w-48 bg-surface-container-lowest border border-outline-variant/20 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20"
+              >
+                <ul class="py-2">
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >2 Piece</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >3 Piece</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Luxury Lawn</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Embroidered</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Printed</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 font-body-md text-body-md hover:bg-surface-variant hover:text-primary transition-colors"
+                      href="#"
+                      >Chiffon</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="font-body-md text-body-md text-on-surface-variant"
+              >24 Products</span
+            >
+            <div class="flex gap-2">
+              <button
+                class="p-2 border border-outline-variant/50 hover:border-primary transition-colors"
+              >
+                <span class="material-symbols-outlined">grid_view</span>
+              </button>
+              <button
+                class="p-2 border border-outline-variant/50 hover:border-primary transition-colors text-on-surface-variant"
+              >
+                <span class="material-symbols-outlined">view_list</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-gutter gap-y-16"
+        >
+          <!-- Product Card 1 -->
+          <div
+            class="group flex flex-col product-card-hover border border-transparent p-4 cursor-pointer relative bg-surface-container-lowest"
+          >
+            <div class="absolute top-6 left-6 z-10 flex flex-col gap-2">
+              <span
+                class="bg-primary text-on-primary font-label-caps text-[10px] px-2 py-1 tracking-widest uppercase"
+                >New Arrival</span
+              >
+            </div>
+            <div
+              class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-6"
+            >
+              <img
+                class="w-full h-full object-cover product-image-zoom"
+                data-alt="A luxurious 3-piece embroidered lawn suit by Maria B in a soft pastel pink shade with intricate silver threadwork. High fashion studio lighting highlighting the delicate chiffon dupatta and the elegant drape."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFUhhoY4TLE0a_JbKF_e9gUGzsbPaYnxX4AGm0xS7uMUSIIQl8hAptS4AMKjpk8x_KfqnSsJhjs5dxojOYqS5J-RxlvTrUbzwHCNdmkIT95gTZMtDE4Wk_8q9EiAIn9ssmrKmwTUB3oHcbAVAodhhD2EKu1tuGc_FQfONmXaCoNayFQVDrrAfTrqsu2KfmviqizDtPTvrTdAZ3ME2gFVxiIHBnnHm2_vtEDlGc2YA-8jMNhQIJhZ1cbXipE05Hinr0bB6RTXiBh2E"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <button
+                  class="quick-view-btn bg-surface-container-lowest text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors border border-outline-variant/30"
+                >
+                  Quick View
+                </button>
+              </div>
+            </div>
+            <div class="flex flex-col text-center">
+              <span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2"
+                >Maria B.</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-on-surface mb-1"
+              >
+                Pastel Rose Embroidered Suit
+              </h3>
+              <span
+                class="font-body-md text-body-md text-on-surface-variant mb-3"
+                >3 Piece Luxury Lawn</span
+              >
+              <span class="font-body-lg text-body-lg text-primary"
+                >Rs. 18,500</span
+              >
+            </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div
+            class="group flex flex-col product-card-hover border border-transparent p-4 cursor-pointer relative bg-surface-container-lowest"
+          >
+            <div class="absolute top-6 left-6 z-10 flex flex-col gap-2">
+              <span
+                class="bg-inverse-surface text-on-primary font-label-caps text-[10px] px-2 py-1 tracking-widest uppercase"
+                >Exclusive</span
+              >
+            </div>
+            <div
+              class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-6"
+            >
+              <img
+                class="w-full h-full object-cover product-image-zoom"
+                data-alt="A stunning Sapphire exclusive luxury printed chiffon dress in deep navy blue with bold floral patterns in gold and ivory. The model showcases the flowy silhouette against a clean, warm white minimalist background."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_Dmcnt4CQmo7IybqxtAaW81mlRGhC3y_HxJtOtKH1j9MW3ywAMcE5VrJddZbBSZPYqCewTngxKLLYRcNC6N1NSYiYt6QbzQAcfC8kLcmc_WNAyzYif4qYTpKvBy9AIZpOWGVS5rRbq6oTIvksIabnxj8ahK5hU4o2K1466v8MOUy4tA1-4IhbihuqI5PjlvXBGAirviLrBTHZgsCxjL77GMyMGGvdttsIUtiDtFAlAl0N9bOfP4uIsuHjVcu4A3JyKNP0VkH0rnA"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <button
+                  class="quick-view-btn bg-surface-container-lowest text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors border border-outline-variant/30"
+                >
+                  Quick View
+                </button>
+              </div>
+            </div>
+            <div class="flex flex-col text-center">
+              <span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2"
+                >Sapphire</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-on-surface mb-1"
+              >
+                Midnight Bloom Chiffon
+              </h3>
+              <span
+                class="font-body-md text-body-md text-on-surface-variant mb-3"
+                >2 Piece Printed Chiffon</span
+              >
+              <span class="font-body-lg text-body-lg text-primary"
+                >Rs. 9,800</span
+              >
+            </div>
+          </div>
+          <!-- Product Card 3 -->
+          <div
+            class="group flex flex-col product-card-hover border border-transparent p-4 cursor-pointer relative bg-surface-container-lowest"
+          >
+            <div
+              class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-6"
+            >
+              <img
+                class="w-full h-full object-cover product-image-zoom"
+                data-alt="Gul Ahmed premium embroidered 3-piece suit featuring a rich burgundy kameez with heavy zardozi neckline detail, paired with a matching crinkle chiffon dupatta. Classic and sophisticated high-end fashion styling."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2tE_zxlbVHRT72FHN1eymQOASzrtURAceGKxSB3sBOa5zdwiANPLA-xbjJuQGdolz2ii5RFhwXsiHp6h71ihj_SRNufJDAY9XweIEp_AU2twKTW8OqdOhQDVgPII6dz8_pNxjEpjGHw8lRnynRJaVekLPdNGPMK3gk0Uw6FwUX80TY7yW_NNn4mr4etPvKN8ZHFPdLhq6mcAnJ_vmGRy8W3-rPgImQU5A7yQ6YM8HdMBj90HyPZhKhRA_HPHB9bZ8E9Mb-0G1JMw"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <button
+                  class="quick-view-btn bg-surface-container-lowest text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors border border-outline-variant/30"
+                >
+                  Quick View
+                </button>
+              </div>
+            </div>
+            <div class="flex flex-col text-center">
+              <span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2"
+                >Gul Ahmed</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-on-surface mb-1"
+              >
+                Burgundy Zardozi Formal
+              </h3>
+              <span
+                class="font-body-md text-body-md text-on-surface-variant mb-3"
+                >3 Piece Embroidered</span
+              >
+              <span class="font-body-lg text-body-lg text-primary"
+                >Rs. 22,000</span
+              >
+            </div>
+          </div>
+          <!-- Product Card 4 -->
+          <div
+            class="group flex flex-col product-card-hover border border-transparent p-4 cursor-pointer relative bg-surface-container-lowest"
+          >
+            <div
+              class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-6"
+            >
+              <img
+                class="w-full h-full object-cover product-image-zoom"
+                data-alt="Limelight contemporary printed lawn 2-piece set in a subtle sage green with geometric white motifs. Fresh, clean editorial photography emphasizing the crispness of the fabric and modern minimalist vibe."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgLTD2rY4JOmfBuRGIU6ookRIjWwlYYieUgluD1NSaaOiE4f2WfRZt5SRvASuRzGtAxDV7JXDOVmvKQk-2F8yLRQo0oEmXBptfFzpY5EF1a4CpsfhEsv_ptB7uh2A9s7NyclZ1rCzT3Lm1-j6E_LxOOkBdybkSpxm-LVPJHA6GG4J9WHlprgCLWBtCFKPZQIGVmkvrxmNsAqc2Pr2bWvVMJPz3tG7Vm20j0rOW1rLmwfWB3h8hSkK81UAyAb-dMpMSXl6CahOX_sI"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <button
+                  class="quick-view-btn bg-surface-container-lowest text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors border border-outline-variant/30"
+                >
+                  Quick View
+                </button>
+              </div>
+            </div>
+            <div class="flex flex-col text-center">
+              <span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2"
+                >Limelight</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-on-surface mb-1"
+              >
+                Sage Geometric Lawn
+              </h3>
+              <span
+                class="font-body-md text-body-md text-on-surface-variant mb-3"
+                >2 Piece Printed</span
+              >
+              <span class="font-body-lg text-body-lg text-primary"
+                >Rs. 5,500</span
+              >
+            </div>
+          </div>
+          <!-- Product Card 5 -->
+          <div
+            class="group flex flex-col product-card-hover border border-transparent p-4 cursor-pointer relative bg-surface-container-lowest"
+          >
+            <div class="absolute top-6 left-6 z-10 flex flex-col gap-2">
+              <span
+                class="bg-primary text-on-primary font-label-caps text-[10px] px-2 py-1 tracking-widest uppercase"
+                >New Arrival</span
+              >
+            </div>
+            <div
+              class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-6"
+            >
+              <img
+                class="w-full h-full object-cover product-image-zoom"
+                data-alt="Aaliya luxury embroidered chiffon dress in ivory white with delicate pearl and silver embellishments. The image exudes a quiet luxury aesthetic, soft focus on the background to highlight the craftsmanship."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQp4nmYzGYT1rnV0u1iVy5r6OItXUuOHmYHm0ynRFgiDkgAh6uPJk9Tr4yiO5gyvF7HTjqO2KzGK0qWkkv11PDuLQ9qT_TqYb5bZbyoZ-Pd1hBr-KaDGT0c5rDIZzuzblaW-ozUktfdDugIPNjAHtm1YuQULqCYh16WaJG3pF9YNvfEGQkx9DLcH6OYXxnROgL7HE9zVdDnu4P-aLpiINVbdggbcOw1fHyzPvh8dPrYyfrslF0gOmR4PnRM6wYU5QCoVpzCG1ALIU"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <button
+                  class="quick-view-btn bg-surface-container-lowest text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors border border-outline-variant/30"
+                >
+                  Quick View
+                </button>
+              </div>
+            </div>
+            <div class="flex flex-col text-center">
+              <span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2"
+                >Aaliya</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-on-surface mb-1"
+              >
+                Ivory Pearl Chiffon
+              </h3>
+              <span
+                class="font-body-md text-body-md text-on-surface-variant mb-3"
+                >3 Piece Luxury Chiffon</span
+              >
+              <span class="font-body-lg text-body-lg text-primary"
+                >Rs. 28,900</span
+              >
+            </div>
+          </div>
+          <!-- Product Card 6 -->
+          <div
+            class="group flex flex-col product-card-hover border border-transparent p-4 cursor-pointer relative bg-surface-container-lowest"
+          >
+            <div
+              class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-6"
+            >
+              <img
+                class="w-full h-full object-cover product-image-zoom"
+                data-alt="Tawakhal printed luxury lawn suit featuring vibrant mustard yellow base with contrasting magenta and teal floral borders. Editorial styling highlighting the vibrant yet sophisticated summer palette."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeYmtOvK95qtG_VnhTs_qsxe-q0ZYCMHmCoPKCrZZF7DfqJNPXg5o2DfWOBgCbP-y5E9QabZFJ8u0bDAjlLe_e6y_Aol0fL2vHDqPAhljHtLoC3lx_C9mzmk-mn093two3iStiXjJMn56ddy5ya4w2saKqq3YUGLLd-mM5T6XGt16TPJmL-pDSZw1YVnsPwlRhSXbXg6at8Xbc5DIBogc6D5NN4PqbnjnDtAqORzVxQyR2NrexVyZ8npKFt1exZVeycIa1wp0X1xk"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <button
+                  class="quick-view-btn bg-surface-container-lowest text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors border border-outline-variant/30"
+                >
+                  Quick View
+                </button>
+              </div>
+            </div>
+            <div class="flex flex-col text-center">
+              <span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2"
+                >Tawakhal</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-on-surface mb-1"
+              >
+                Mustard Floral Bloom
+              </h3>
+              <span
+                class="font-body-md text-body-md text-on-surface-variant mb-3"
+                >3 Piece Printed Lawn</span
+              >
+              <span class="font-body-lg text-body-lg text-primary"
+                >Rs. 7,200</span
+              >
+            </div>
+          </div>
+          <!-- Product Card 7 -->
+          <div
+            class="group flex flex-col product-card-hover border border-transparent p-4 cursor-pointer relative bg-surface-container-lowest"
+          >
+            <div
+              class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-6"
+            >
+              <img
+                class="w-full h-full object-cover product-image-zoom"
+                data-alt="Zellbury minimalist 2-piece solid co-ord set in a dusty mauve tone. The focus is on the premium drape of the fabric and clean tailoring, perfect for smart casual luxury wear."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd4OOa75YxAskTDJrMlEBDdaH-qztO8PCWEBiNfnSxv8KWTvLPiitelS0fv7BzsSK1YRl22Pf7hfu05REaQkf8JP4fU4Rm11nBYaXYGGcK6Ceq8pr8tdf5ZdKIXavWnHOE9ldnb0MWo_XlFckY4gp0C9PYfS-h1-dW-n0wikO2KaJPw54v46-ZUQiNSXTMjGIcornj2hiDPVxJulb1f8wEHe1CKel1Vgv58zHhLKDI7mCDxonxKa4Z0dO8ZOyM2YJHHyghrJq3e1w"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <button
+                  class="quick-view-btn bg-surface-container-lowest text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors border border-outline-variant/30"
+                >
+                  Quick View
+                </button>
+              </div>
+            </div>
+            <div class="flex flex-col text-center">
+              <span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2"
+                >Zellbury</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-on-surface mb-1"
+              >
+                Dusty Mauve Co-ord
+              </h3>
+              <span
+                class="font-body-md text-body-md text-on-surface-variant mb-3"
+                >2 Piece Solid</span
+              >
+              <span class="font-body-lg text-body-lg text-primary"
+                >Rs. 4,900</span
+              >
+            </div>
+          </div>
+          <!-- Product Card 8 -->
+          <div
+            class="group flex flex-col product-card-hover border border-transparent p-4 cursor-pointer relative bg-surface-container-lowest"
+          >
+            <div class="absolute top-6 left-6 z-10 flex flex-col gap-2">
+              <span
+                class="bg-inverse-surface text-on-primary font-label-caps text-[10px] px-2 py-1 tracking-widest uppercase"
+                >Exclusive</span
+              >
+            </div>
+            <div
+              class="relative aspect-[3/4] overflow-hidden bg-surface-variant mb-6"
+            >
+              <img
+                class="w-full h-full object-cover product-image-zoom"
+                data-alt="Maria B high-end bridal luxury unstitched collection piece. Deep ruby red heavily embellished with gold zari and sequins. The fabric looks opulent and heavy, photographed in dramatic, moody lighting."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3zhgSb6JCBDXVBocDq9nD9HroKbY-pefzTqEOnN51U-QvigNY7QB3_awR6MCSE7bGrNs-vvMNlsRfZpxz5hGsVgmlqGAMA30cdQji9LgOv4upxWEMlnkPw1GkEMWSytd0RgO3cT1O1XGWbmuAUrvqdNS0A2n7dmGg-vJosYydseZjl9jZkR-ug1ZkMyWBnY1dAgGjmJMPPzNZOrZ414tvgX3Fr16y2if1twMjCCWQ5T2XWVWYUs3qs6LbjHhoaZL0Rq6macD4cuY"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <button
+                  class="quick-view-btn bg-surface-container-lowest text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors border border-outline-variant/30"
+                >
+                  Quick View
+                </button>
+              </div>
+            </div>
+            <div class="flex flex-col text-center">
+              <span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2"
+                >Maria B.</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-on-surface mb-1"
+              >
+                Ruby Zari Bridal
+              </h3>
+              <span
+                class="font-body-md text-body-md text-on-surface-variant mb-3"
+                >3 Piece Unstitched Bridal</span
+              >
+              <span class="font-body-lg text-body-lg text-primary"
+                >Rs. 45,000</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="mt-20 flex justify-center items-center gap-4">
+          <button
+            class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 hover:border-primary text-on-surface-variant transition-colors group"
+          >
+            <span
+              class="material-symbols-outlined text-sm group-hover:text-primary"
+              >chevron_left</span
+            >
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center font-body-md text-body-md border border-primary bg-primary text-on-primary"
+          >
+            1
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center font-body-md text-body-md border border-outline-variant/30 hover:border-primary text-on-surface-variant hover:text-primary transition-colors"
+          >
+            2
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center font-body-md text-body-md border border-outline-variant/30 hover:border-primary text-on-surface-variant hover:text-primary transition-colors"
+          >
+            3
+          </button>
+          <span class="font-body-md text-body-md text-on-surface-variant"
+            >...</span
+          >
+          <button
+            class="w-10 h-10 flex items-center justify-center font-body-md text-body-md border border-outline-variant/30 hover:border-primary text-on-surface-variant hover:text-primary transition-colors"
+          >
+            5
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 hover:border-primary text-on-surface-variant transition-colors group"
+          >
+            <span
+              class="material-symbols-outlined text-sm group-hover:text-primary"
+              >chevron_right</span
+            >
+          </button>
+        </div>
+      </div>
+    </main>
+    <div id="ss-faq"></div>
+    <div id="ss-footer"></div>
+
+    <script src="ss-navbar.js"></script>
+    <script src="ss-faq.js"></script>
+    <script src="ss-footer.js"></script>
+  </body>
+</html>
