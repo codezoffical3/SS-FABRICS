@@ -35,7 +35,7 @@
             <a href="men.html" class="ss-nav-link" data-mega="ss-men-mega">Men</a>
             <a href="women.html" class="ss-nav-link" data-mega="ss-women-mega">Women</a>
             <a href="jewellery.html" class="ss-nav-link" data-mega="ss-jewellery-mega">Jewellery</a>
-            <a href="#owners-choice" class="ss-nav-link" data-mega="ss-owners-mega">Owner's Choice</a>
+            <a href="contact-us.html" class="ss-nav-link" data-mega="ss-owners-mega">Contact us</a>
           </div>
           
           <!-- Right Icons -->
@@ -48,12 +48,11 @@
                 <span class="material-symbols-outlined text-[24px]">account_circle</span>
               </button>
               <div class="ss-account-dropdown" id="ss-account-dropdown">
-                <a href="#">Sign In</a>
-                <a href="#">Register</a>
+                <a href="my-profile.html">Sign In</a>
+                <a href="my-profile.html">Register</a>
                 <div class="ss-separator"></div>
-                <a href="#">My Orders</a>
-                <a href="#">Wishlist</a>
-                <a href="#">Profile</a>
+                <a href="my-profile.html">My Orders</a>
+                <a href="my-profile.html">Profile</a>
                 <div class="ss-separator"></div>
                 <a href="#" class="ss-logout">Logout</a>
               </div>
@@ -153,24 +152,7 @@
           </div>
         </div>
         
-        <!-- Mega Menu: Owner's Choice -->
-        <div class="ss-mega-panel" id="ss-owners-mega">
-          <div class="ss-owners-layout">
-            <div class="ss-owners-cards">
-              <a href="#"><span class="material-symbols-outlined">star</span> Editor's Picks<span>Curated by our style experts</span></a>
-              <a href="#"><span class="material-symbols-outlined">trending_up</span> Trending Now<span>What everyone is loving</span></a>
-              <a href="#"><span class="material-symbols-outlined">crown</span> Premium Collection<span>Our finest selection</span></a>
-              <a href="#"><span class="material-symbols-outlined">military_tech</span> Best Sellers<span>Timeless favorites</span></a>
-              <a href="#"><span class="material-symbols-outlined">new_releases</span> New Arrivals<span>Fresh from the atelier</span></a>
-            </div>
-            <div class="ss-owners-banner">
-              <p>The Atelier</p>
-              <p>Curated<br>by the Owner</p>
-              <p>A personal selection of the finest pieces</p>
-              <button>Discover →</button>
-            </div>
-          </div>
-        </div>
+        
       </nav>
       
       <!-- Search Modal -->

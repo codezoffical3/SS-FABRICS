@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Account Dashboard | SS FABRICS</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-dim": "#e0d9d0",
+                  "secondary-fixed-dim": "#c8c6c5",
+                  "on-primary-fixed": "#251a00",
+                  "surface-tint": "#755b14",
+                  "surface-container-lowest": "#ffffff",
+                  "on-error-container": "#93000a",
+                  "on-primary-container": "#513c00",
+                  "surface": "#fff8f2",
+                  "primary": "#755b14",
+                  "on-surface": "#1e1b16",
+                  "inverse-on-surface": "#f7f0e6",
+                  "tertiary-container": "#aeaaa4",
+                  "surface-container": "#f5ede3",
+                  "inverse-surface": "#33302a",
+                  "inverse-primary": "#e5c272",
+                  "secondary-fixed": "#e5e2e1",
+                  "outline-variant": "#d0c5b3",
+                  "on-tertiary-fixed-variant": "#494742",
+                  "on-secondary": "#ffffff",
+                  "error": "#ba1a1a",
+                  "on-primary-fixed-variant": "#5a4300",
+                  "tertiary": "#615e59",
+                  "on-secondary-fixed-variant": "#474646",
+                  "secondary-container": "#e5e2e1",
+                  "primary-fixed": "#ffdf99",
+                  "primary-container": "#c8a75a",
+                  "on-surface-variant": "#4d4638",
+                  "outline": "#7f7667",
+                  "primary-fixed-dim": "#e5c272",
+                  "surface-container-highest": "#e9e1d8",
+                  "background": "#fff8f2",
+                  "on-background": "#1e1b16",
+                  "surface-container-low": "#faf2e9",
+                  "secondary": "#5f5e5e",
+                  "on-tertiary-fixed": "#1d1b17",
+                  "on-tertiary-container": "#413f3a",
+                  "on-primary": "#ffffff",
+                  "tertiary-fixed-dim": "#cac6bf",
+                  "on-error": "#ffffff",
+                  "tertiary-fixed": "#e7e2db",
+                  "on-secondary-fixed": "#1c1b1b",
+                  "on-secondary-container": "#656464",
+                  "surface-container-high": "#efe7de",
+                  "surface-bright": "#fff8f2",
+                  "on-tertiary": "#ffffff",
+                  "error-container": "#ffdad6",
+                  "surface-variant": "#e9e1d8"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0px",
+                  "lg": "0px",
+                  "xl": "0px",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "margin-mobile": "20px",
+                  "margin-desktop": "80px",
+                  "unit": "8px",
+                  "container-max": "1440px",
+                  "section-gap": "120px",
+                  "gutter": "24px"
+          },
+          "fontFamily": {
+                  "display-lg": ["Playfair Display"],
+                  "headline-md": ["Playfair Display"],
+                  "display-lg-mobile": ["Playfair Display"],
+                  "headline-sm": ["Playfair Display"],
+                  "body-md": ["Manrope"],
+                  "body-lg": ["Manrope"],
+                  "label-caps": ["Manrope"]
+          },
+          "fontSize": {
+                  "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                  "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                  "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                  "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                  "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #fff8f2;
+      color: #1e1b16;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f5ede3;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #755b14;
+    }
+    .nav-item-active {
+      font-weight: 600;
+      border-left: 2px solid #755b14;
+      padding-left: 12px;
+      margin-left: -14px;
+    }
+  </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar Implementation -->
+<header class="w-full top-0 left-0 border-b border-outline-variant/30 bg-surface z-50">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 md:py-12 max-w-container-max mx-auto">
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md uppercase tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors" href="#">Collections</a>
+<a class="font-body-md text-body-md uppercase tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors" href="#">Bespoke</a>
+</div>
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface tracking-tighter cursor-pointer">
+        SS FABRICS
+      </div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 items-center mr-4">
+<a class="font-body-md text-body-md uppercase tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors" href="#">Heritage</a>
+<a class="font-body-md text-body-md uppercase tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors" href="#">Atelier</a>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity">shopping_bag</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity">person</span>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-section-gap flex flex-col md:flex-row gap-16">
+<!-- Sidebar Navigation -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-32">
+<h2 class="font-label-caps text-label-caps uppercase mb-8 opacity-50">Account</h2>
+<ul class="space-y-6">
+<li>
+<a class="font-body-lg text-body-lg text-primary nav-item-active flex items-center gap-4 group" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">person</span>
+              My Profile
+            </a>
+</li>
+<li>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+              My Orders
+            </a>
+</li>
+<li>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">favorite</span>
+              My Wishlist
+            </a>
+</li>
+<li>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">settings</span>
+              Preferences
+            </a>
+</li>
+<li class="pt-8 border-t border-outline-variant/30">
+<a class="font-body-lg text-body-lg text-error hover:opacity-80 transition-opacity flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">logout</span>
+              Sign Out
+            </a>
+</li>
+</ul>
+<!-- Loyalty Card Sidebar -->
+<div class="mt-12 p-8 bg-inverse-surface text-inverse-on-surface">
+<p class="font-label-caps text-label-caps text-primary-fixed mb-2">Membership Status</p>
+<h3 class="font-headline-sm text-headline-sm mb-4">Gold Atelier</h3>
+<ul class="text-sm space-y-2 opacity-80 font-body-md">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">check</span> Priority Tailoring
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">check</span> Private Showings
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">check</span> 15% Atelier Credit
+            </li>
+</ul>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-grow space-y-16">
+<!-- Welcome Section -->
+<div class="border-b border-outline-variant/30 pb-12">
+<h1 class="font-display-lg text-display-lg-mobile md:text-headline-md text-on-surface mb-2">Welcome back, Julian</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl italic">
+          "True elegance is the union of craftsmanship and character. Your bespoke journey continues here."
+        </p>
+</div>
+<!-- Bento Layout Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Recent Orders (Large Block) -->
+<div class="lg:col-span-8 bg-surface-container p-8 md:p-12 border border-outline-variant/10">
+<div class="flex justify-between items-end mb-8">
+<h3 class="font-headline-sm text-headline-sm">Recent Orders</h3>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">View All</a>
+</div>
+<div class="space-y-6">
+<!-- Order Item -->
+<div class="flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-outline-variant/30 last:border-0 gap-4">
+<div class="flex gap-6 items-center">
+<div class="w-20 h-24 bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up studio photograph of a premium charcoal grey wool fabric with a subtle herringbone texture, draped elegantly to show its heavy weight and high-quality weave. Soft, cinematic lighting highlights the rich fibers, suggesting luxury and bespoke tailoring. The overall atmosphere is sophisticated and minimalist, aligned with a high-end fashion brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIT3Fe_6cZzColgjlYr3wUzlV7WyYcbskILJpGdey-L-fctNvQir2GeUhG70WmSaTDZTiUQaZjlLmZy8Hiqo2kVqagfKG2auFvORDOVZzUAuTGQd8-FwpvWmQAkwItHwC5M6cfWuiUJKo9ppA-cbY0l2QHacA7Pgu_3BWWTt1OsK6KbakhqU2-soyQ1bSsFV2JfyRGAoxs-hVrfaHT_KoWMdKjZW95NqQwCkedT1U-Z0yOPgB_ZHXshUU_rbE-qDH8xENKpjNbguY"/>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Order #SS-89241</p>
+<p class="font-body-lg text-body-lg font-medium">Italian Cashmere Suit Set</p>
+<p class="text-sm opacity-60">Delivered Jan 12, 2024</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-12">
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-primary mb-1 uppercase">Status</p>
+<p class="font-body-md text-body-md">In Tailoring</p>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Total</p>
+<p class="font-body-md text-body-md">$4,250.00</p>
+</div>
+</div>
+</div>
+<!-- Order Item 2 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-outline-variant/30 last:border-0 gap-4">
+<div class="flex gap-6 items-center">
+<div class="w-20 h-24 bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A macro shot of navy blue raw silk fabric featuring a distinctive slub texture and a faint natural sheen. The fabric is folded neatly, emphasizing its crisp yet luxurious hand-feel. The lighting is focused and warm, creating high contrast and showcasing the artisanal quality of the textile. Quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuLpEfnjs75ex-VEGWXf3PvjJ3_hLeiM5pNdiJfNPmOU_wOIi43ItQas8ZSP72WQoO9CuN69QXcqyALPtCvho090gBOPGhwgd4X-S5bo1ljEDzEGEQOUmoVosFbuswLdTGskYut37KULBehdp05odwx8dsXF2MHjP0G24jYfcTNaJwULbTWZ-rqiubR_sP7VdR_5R8aLmmYbBGAzj6gDGUNbqOhtIPR5vIxLmmbYbZT7KXGx-qZVaUZw1pEWTGo_EapM5tuWIZxLo"/>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Order #SS-88902</p>
+<p class="font-body-lg text-body-lg font-medium">Bespoke Navy Silk Linings</p>
+<p class="text-sm opacity-60">Delivered Dec 28, 2023</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-12">
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-primary mb-1 uppercase">Status</p>
+<p class="font-body-md text-body-md">Dispatched</p>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Total</p>
+<p class="font-body-md text-body-md">$840.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Membership/Perks (Small Block) -->
+<div class="lg:col-span-4 bg-primary p-8 md:p-12 text-on-primary flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6" style="font-variation-settings: 'wght' 200;">workspace_premium</span>
+<h3 class="font-headline-sm text-headline-sm mb-4 leading-tight text-white">Your Atelier Journey</h3>
+<p class="font-body-md text-body-md text-white/80 mb-8">
+              You are 250 points away from Platinum status. Unlock complimentary fabric consultations and international concierge service.
+            </p>
+</div>
+<button class="w-full py-4 border border-white/30 font-label-caps text-label-caps uppercase hover:bg-white hover:text-primary transition-all">Explore Benefits</button>
+</div>
+<!-- Wishlist Preview (Wide Block) -->
+<div class="lg:col-span-12 border border-outline-variant/30 p-8 md:p-12">
+<div class="flex justify-between items-end mb-12">
+<h3 class="font-headline-sm text-headline-sm">Curated Wishlist</h3>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">View Wishlist</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Wishlist Item 1 -->
+<div class="group">
+<div class="aspect-[3/4] mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-fashion product shot of a swatch of Emerald Green velvet fabric. The light catches the pile of the fabric, creating deep shadows and luminous highlights. It is presented on a minimalist stone pedestal in a gallery-like setting. The overall mood is one of extreme luxury, decadence, and exclusivity. Deep green, matte black accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhfxMEsC6I-2IUIsD63gW8w5mN3jN0yqDOL9-x5liDm_7zZrU0KrYVg0PPqcR6rsyR_9TEQUyi_vy1MJAE7ebhZvnCBO7z-k49N48UnqW_R8xn61VIR2teyEH4zPAE8Zfwmk0vLoJxQOXrOmEffvTUF-8foNE_vZ5kD0Xo0AROtIQjOBm3tjGujGUuX5mSYCww_lWspgVbbaj_jFgyhm36w-W9TIZNRRGTNQhPm-Fvas77peJ5RQvmSBKbo5LqgEOV7eefEXg8B5w"/>
+<button class="absolute bottom-4 right-4 bg-white/90 p-3 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-body-lg text-body-lg mb-1">Regency Emerald Velvet</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-60 mb-3">$140.00 / Yard</p>
+<button class="font-label-caps text-label-caps text-primary uppercase tracking-widest border-b border-transparent hover:border-primary pb-1 transition-all">Add to Bag</button>
+</div>
+<!-- Wishlist Item 2 -->
+<div class="group">
+<div class="aspect-[3/4] mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Bespoke tailoring accessory: A collection of vintage-inspired horn buttons and a gold measuring tape resting on a piece of cream-colored linen fabric. The composition is artistic and editorial, with soft shadows and a focused depth of field. The aesthetic is heritage-focused and timeless, highlighting the attention to detail in fine garment making. Light and airy palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyGZRZaz_EqAhKelKjWVUypdEs3lap0Q_Txq75FKWYzOWL6tVaUFHR6tEIw0cbEzNUQqOVN_-abnOK13LrjpO1kEmqBOS_kH9RikrPM17xibKlkgOEhcrBx81gMChbDaigYVDZ7ARipBHklmsQtJWW_moxc9WNueTOLtSC37tag4cq5USf0jAO1rvEolt7KzdDpHyGS8_ovfUAG_jengLzmZ-YotV1W7dvIub2-kxWxsGegeOLunkrUqP0cgxqroy-rqZboWnPBvI"/>
+<button class="absolute bottom-4 right-4 bg-white/90 p-3 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-body-lg text-body-lg mb-1">Bespoke Button Kit (Gold)</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-60 mb-3">$210.00</p>
+<button class="font-label-caps text-label-caps text-primary uppercase tracking-widest border-b border-transparent hover:border-primary pb-1 transition-all">Add to Bag</button>
+</div>
+<!-- Wishlist Item 3 -->
+<div class="group">
+<div class="aspect-[3/4] mb-6 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious close-up of a vicuña wool scarf in a natural camel color, showing its incredibly fine and soft texture. The fabric is loosely knotted to demonstrate its fluidity and lightness. Set against a soft-focus background of a warm-toned interior. The lighting is soft and golden, evoking a sense of rare, expensive quality and comfort. Quiet luxury lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAJb5GT_aYiRcIXZxhHv9DGm_kM15DcfhCAiIzYK5xWvIk78WBPNQgfi074cKtcRAYnA3WQOlRpPj05XQ0vZG1jNNqxLP1LZo61PXTQ0aTBgUHZlg_m3vahOg74QHE5pmDRborMcoJxJmmwd-FGQMDA18vn375vpvY_vPTaLAEgHTIlkuibas1TY11-xeOPVVrYbRoGgzrVTEUxhHU_fc2l-Ys48GqDLwOxFjuViQnqRS8cMouv9uA9bkVP_coXJGU8o-i0n586RY"/>
+<button class="absolute bottom-4 right-4 bg-white/90 p-3 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-body-lg text-body-lg mb-1">Natural Vicuña Wrap</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-60 mb-3">$1,250.00</p>
+<button class="font-label-caps text-label-caps text-primary uppercase tracking-widest border-b border-transparent hover:border-primary pb-1 transition-all">Add to Bag</button>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="lg:col-span-12 relative h-96 overflow-hidden flex items-center px-8 md:px-24">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A wide, atmospheric shot of a high-end bespoke tailoring atelier at night. The room features dark wood paneling, floor-to-ceiling windows overlooking a city skyline, and elegant mannequins wearing half-finished luxury suits. A warm, focused light shines on a tailor's workbench. The mood is intimate, exclusive, and profoundly professional. Cinematic editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsAyCdgiRtKpUL1eYfbIhr9e_dhzpvZ9tITC2xzzZvVnCS8GTnC2_QV9RxhfH1bzqC114TiQJKbDRJwX3hGPQilXrgihW-sm8QnQ4uazCqNgPhXHmyU2Yc7HGq72jl8D4KlsoOq66mrVLlH00oZrAZHNlqL3GeONZyBQ-ptKGS4V2HQtRiaJh4kg8SeEWQ22lpEm9mLGlQCjKaJOQlkmFnODybO0EBmalxm3ZhKCM_bdydWbZ2vvjQp65wHMtb_W754-iCP5Hej-U"/>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 max-w-xl text-white">
+<h2 class="font-display-lg text-headline-md md:text-display-lg mb-6 leading-tight">Elevate Your Vision</h2>
+<p class="font-body-lg text-body-lg mb-10 text-white/80">Experience the pinnacle of sartorial excellence. Our master tailors are available for private consultations in London, Paris, and Milan.</p>
+<button class="bg-primary text-on-primary px-10 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-white hover:text-primary transition-all">Book Your Private Consultation</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Implementation -->
+<footer class="w-full bottom-0 bg-surface-container-highest border-t border-outline-variant/20 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-24 max-w-container-max mx-auto gap-gutter">
+<div class="font-display-lg text-headline-sm text-on-surface tracking-tighter uppercase mb-8 md:mb-0">
+        SS FABRICS
+      </div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-primary transition-colors uppercase" href="#">Contact</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-primary transition-colors uppercase" href="#">Shipping</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-primary transition-colors uppercase" href="#">Returns</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-primary transition-colors uppercase" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-primary transition-colors uppercase" href="#">Terms of Service</a>
+</div>
+<div class="mt-12 md:mt-0 font-label-caps text-label-caps text-on-surface-variant/40 tracking-[0.1em]">
+        © 2024 SS FABRICS. ALL RIGHTS RESERVED.
+      </div>
+</div>
+</footer>
+<script>
+    // Subtle Scroll Effects
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('py-6');
+        header.classList.remove('py-8', 'md:py-12');
+        header.classList.add('shadow-sm');
+      } else {
+        header.classList.remove('py-6', 'shadow-sm');
+        header.classList.add('py-8', 'md:py-12');
+      }
+    });
+
+    // Custom hover interactions for icons
+    document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+      icon.addEventListener('mouseenter', () => {
+        icon.style.transform = 'translateY(-2px)';
+      });
+      icon.addEventListener('mouseleave', () => {
+        icon.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
+</body></html>
