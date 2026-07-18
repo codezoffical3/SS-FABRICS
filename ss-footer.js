@@ -59,7 +59,7 @@
             <h3 class="ss-footer-heading">Customer Service</h3>
             <ul class="ss-footer-links">
               <li><a href="contact-us.html">Contact Us</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="terms&conditions.html">Terms & Conditions</a></li>
               <li><a href="#">Track Order</a></li>
               <li><a href="#">Privacy Policy</a></li>
               </ul>
