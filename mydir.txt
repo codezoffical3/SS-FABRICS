@@ -1,0 +1,35 @@
+F:\github project\SS-FABRICS>tree /f
+Folder PATH listing
+Volume serial number is 9800-7FF3
+F:.
+│   contact-us.html
+│   index.html
+│   jewellery.html
+│   men.html
+│   my-profile.html
+│   prod.html
+│   signin.html
+│   signup.html
+│   ss-faq.js
+│   ss-footer.js
+│   ss-navbar.js
+│   terms&conditions.html
+│   women.html
+│
+└───assests
+    ├───images
+    │       jewellery-hero.jpeg
+    │       jewellery-home.jpeg
+    │       join-the-house.jpeg
+    │       men-hero.jpeg
+    │       men-home.jpeg
+    │       ss-fabrics-logo.png
+    │       ssfabrics.jpeg
+    │       women-hero.jpeg
+    │       women-home.jpeg
+    │
+    └───videos
+            hero-bg.mp4
+
+
+F:\github project\SS-FABRICS>
